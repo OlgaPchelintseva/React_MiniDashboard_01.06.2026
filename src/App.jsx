@@ -4,6 +4,7 @@
 import React, { useState, useMemo, useEffecct } from "react";
 import { generateMockData } from "./mocKData";
 import DashboardMetrics from "./DashboadMetrics";
+import FilterPanel from "./FilterPanel";
 
 function App() {
 
@@ -15,6 +16,11 @@ function App() {
   // ]
 
   const [rawData, setRawData] = useState(()=>generateMockData());
+  const [filters, setFilters] =useState({search: '', category: '', status: ''});
+  
+  const filteredData = useMemo(() => {
+
+  }, [rawData, filters.search, filters.category, filters.status]);
 
   return (
     // <>
@@ -24,6 +30,7 @@ function App() {
     
     <>
       <DashboardMetrics filteredData={rawData}/>
+      {/* <FilterPanel filters={} setFilters={} onOpenModal={}/> */}
     </>
   );
 };

@@ -29,6 +29,7 @@ function DashboardMetrics({filteredData}){
                 <p>{metrics.successRate}%</p>
             </div>
         </div>
+        
     );
 };
 
