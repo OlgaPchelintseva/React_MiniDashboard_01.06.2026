@@ -132,6 +132,9 @@ function AnaliticTable({data}){
                                 Статус
                                 <div style={resizeStyle} onMouseDown={(e) => handleMouseDown(e, 'status', thStatusRef.current)} />
                             </th>
+                            <th style={{border: '1px solid #ddd'}}>
+                                Дата
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
